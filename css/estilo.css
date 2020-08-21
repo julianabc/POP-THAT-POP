@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+/* fontes: */
+@font-face{	font-family: 'Confessions';	src: url("../fonts/Confessions.TTF"); }
+
+@font-face{ font-family: 'Blackout'; src: url("../fonts/07Blackout.ttf"); }
+
+@font-face{ font-family: 'Titulo'; src: url("../fonts/Ray Of Light.TTF"); }
+
+/*Estrutura da pagina - Mobile First*/
+
+body, label{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12pt;
+	background-color: black;
+	color: white;
+}
+
+h2{
+	background-color: #CD0000;
+	margin: 0px;
+	font-family: 'Titulo',sans-serif;
+	font-weight: bold;
+	font-size: 20pt;
+	color: white;
+	padding: 3px;
+}
+
+a{
+	text-decoration: none;
+	color: #FFE4E1;
+}
+
+.botao{
+	background-color: #FF1493;
+	color: black;
+}
+.botao, .button-form{
+	margin: 10px auto;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	transition: 1s color;
+}
+
+.botao:hover, .button-form:hover{
+	color: white;
+} 
+
+/* menu e seus links */
+nav.menu1{
+	background-color: #1C1C1C;
+}
+
+nav.menu1, nav.menu2{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+nav.menu1 ul, nav.menu2 ul{
+	display: flex;
+	flex-direction: column; 
+	list-style: none;
+}
+
+nav.menu1 ul li a{
+	font-family: 'Confessions', sans-serif;
+	font-size: 25pt;
+}
+
+nav.menu1 ul li a, nav.menu2 ul li a{
+	display: flex;
+	flex-direction: column;
+	padding: 3px;
+	width: 100%;
+	transition: 1s background-color;
+	transition: 1s color;
+	color: white;
+}
+
+nav.menu1 ul li a:hover{
+	background-color: #CD0000;
+	color: black;
+}
+
+section.categorias h2{
+	display: none;
+}
+
+/* Menu 2 aqui, cores diferentes para as categorias*/
+
+nav.menu2 ul li{
+	font-weight: bold;
+	font-family: 'Blackout', sans-serif;
+	font-size: 22pt;
+}
+
+nav.menu2 ul li a:hover{
+	text-transform: uppercase;
+}
+
+nav.menu2 ul li#brit a:hover{ background-color: #1C1C1C; color: #FF4500; }
+nav.menu2 ul li#m a:hover{ background-color: #00BFFF; color: #FFB90F;  }
+nav.menu2 ul li#xtina a:hover{ background-color: white; color: #8B8B7A; }
+
+
+ /*o banner do site */
+
+div.foto-banner img{
+	display: flex;
+	margin: 10px auto;
+	width: 100%;
+	/*border: 1px solid;*/
+	box-shadow: 5px 10px 10px #1C1C1C;
+}
+
+/* agora, as seções */
+section{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 10px;
+}
+
+#destaques div{
+	margin-top: 10px;
+}
+
+#destaques div p{
+	background-color: gray;
+	color: white;
+}
+
+#destaques img{
+	width: 100%;
+}
+
+#atendimento h3{
+	background-color: #C71585;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+footer{
+	clear: both;
+	text-align: center;
+	background-color: #1C1C1C;
+	padding: 10px;
+}
+
+footer a{
+	transition: 1s color;
+}
+
+footer a:hover{
+	text-transform: uppercase;
+	color: #CD0000;
+}
+
+/* Formatação de telas */
+@media screen and (min-width: 992px){
+
+	nav.menu1, nav.menu2{
+		flex-direction: row;
+		justify-content: space-between;
+
+	}
+
+	nav.menu1 ul, nav.menu2 ul{
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 30px auto;
+		width: 70%;
+	}
+	
+
+	/* header - trabalhar com imagem melhor amanhã */
+	div.foto-banner img{
+		width: 80%; 
+	}
+
+	/* seções */
+	#destaques{
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 10px auto;
+		align-items: flex-start;
+	}
+
+	#destaques div{
+		flex-grow: 1;
+		flex-basis: 30%;
+		margin: 5px;
+	}
+	#destaques h2, #contatos h2{
+		width: 100%;
+		text-align: center;
+	}
+
+} /* Fim do media screen */ 
