@@ -1,0 +1,90 @@
+@charset 'utf-8';
+
+/* Mobile First: */
+
+.container-login{
+	box-shadow: 5px 5px 8px #CD0000;
+	background-color: #1C1C1C;
+}
+
+.container-login{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	margin: 30px;
+}
+
+.button-form{
+	color: black;
+	background-color: #CD0000;
+	
+}
+
+legend{
+	margin: 0px;
+	font-family: 'Titulo',sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+	color: white;
+	padding: 3px;
+}
+
+/* Formatação do fieldset */
+
+fieldset, button{
+	border: none;
+	margin: 0px auto;
+}
+
+fieldset > a{
+	color: #FF1493;
+	transition: color 1s;
+}
+
+fieldset > a:hover{
+	color: white;
+}
+
+fieldset.cadastroF{
+	display: none;
+}
+
+/* Formatação do label */
+label{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	width: 100%;
+	text-align: center;
+	margin: 2px;
+	background-color: #1C1C1C;
+	
+}
+
+/* Formatação de inputs */
+input{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 5px;
+}
+
+/*media query */
+@media screen and (min-width: 760px) {
+	.container-login{
+		width: 50%;
+		margin: 30px auto;
+		background-color: black;
+	}
+
+	label{
+		background-color: black;
+	}
+	input{
+		width: 350px;
+		margin: 0 auto;
+	}
+
+	
+} /* Fim da media query*/
+
