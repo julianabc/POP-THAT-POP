@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login e Cadastro</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body>
+	<header>
+        <nav class="menu1">
+			<ul type="disc">
+                <li id="home"><a href="../index.html">Home</a></li>
+				<li><a href="../index.html#destaques">Destaques</a></li>
+                <li><a href="../index.html#sobre">Sobre</a></li>
+                <li><a href="../index.html#atendimento">Atendimento</a></li>
+                <li><a href="login.html">Login</a></li>    
+            </ul>
+        </nav> 
+        <section class="categorias">
+            <h2>Categorias</h2> <!-- Uso apenas semantico. -->
+            <nav class="menu2">
+                <ul type="square">
+                    <li id="brit"><a href="blackout.html#blackout">blackout</a></li>
+				    <li id="m"><a href="rol.html#rol">ray of light</a></li>
+				    <li id="xtina"><a href="stripped.html#stripped">stripped</a></li>   
+                </ul>
+            </nav>
+        </section>
+        </header>
+
+        <section class="container-login">
+        <!-- Caixa de login -->
+        <form action="#" method="post" name="form">   
+            <fieldset class="loginF" name="fieldLogin" id="fieldL">
+            	<legend>Login:</legend>
+            	<label for="emailL">Email:</label>
+            		<input type="text" name="email" id="emailL" required>
+            	<br><br>
+            	<label for="senha">Senha: </label>
+            		<input type="password" name="password" id="senha" required="">
+            	<br><br>
+            	<p>Ainda não tem uma conta?</p><a href="javascript:aparecerLogin();" class="botao" id="apCadastro">Crie aqui.</a>
+                <br><br>
+
+                <!-- Botões para LOGIN -->
+                <button type="button" id="login" class="button-form">Entrar</button>
+                <button type="reset" name="reset" class="button-form">Reset</button>
+                <br><br>
+            </fieldset>
+
+                <!-- Essa parte vai ficar escondida, ela vai aparecer por meio do link acima com o auxilio do javascript -->
+                <fieldset class="cadastroF" id="fieldC" name="fieldCadastro">
+                    <legend>Cadastro:</legend> 
+                      <label for="cpf">CPF:</label>
+                        <input type="text" name="cpf" id="cpf" required>
+                      <br><br>
+                      <label for="name">Nome Completo:</label>
+                        <input type="text" name="nome" id="name" required>
+                      <br><br>
+                      <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" required>
+                      <br><br>
+                      <label for="senha">Senha: </label>
+                        <input type="password" name="password" id="senha" required>
+                      <br><br>
+                      <label>Confirme a Senha: </label>
+                        <input type="password" name="cpassword" id="csenha">
+                      <br><br>
+                    <p>Já tem uma conta?</p><a href="javascript:aparecerLogin();" class="botao" id="apLogin">Entre aqui.</a>
+                    <br><br>   
+                    <!-- Botões para Cadastro -->
+                    <button type="button" id="cadastrar" class="button-form">Limpar</button>
+                    <button type="reset" name="reset" class="button-form">Cadastrar</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Para o backend, talvez seja necessário criar outro form. Mas a nível de frontend, está bom assim. -->
+    <footer id="rodape">
+            <p>Desenvolvido por <a href="#">Juliana Câmara</a></p>
+    </footer>
+</body>
+</html>
